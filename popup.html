@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free ATS Resume Builder</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">A</div>
+      <div>
+        <h1>Free ATS Resume Builder</h1>
+        <p class="tagline">PDF / DOCX / TXT &rarr; clean ATS-friendly DOCX</p>
+      </div>
+    </header>
+
+    <main>
+      <label id="drop" class="drop" for="file">
+        <input id="file" type="file" accept=".pdf,.docx,.txt,.md" hidden />
+        <svg class="drop-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M19 13v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-5h2v5h10v-5h2zM11 3h2v8.17l2.59-2.58L17 10l-5 5-5-5 1.41-1.41L11 11.17V3z"
+          />
+        </svg>
+        <span id="dropText" class="drop-text">Click to choose your resume</span>
+        <span class="drop-hint">or drag &amp; drop it here</span>
+      </label>
+
+      <button id="convert" class="btn" disabled>Build ATS resume</button>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <details class="ai-panel">
+        <summary>✨ AI enhance (optional)</summary>
+        <div class="ai-body">
+          <p class="ai-note">
+            Paste a free Google Gemini API key for sharper, near-perfect output. Stored
+            only on this device; leave blank to use the offline formatter.
+          </p>
+          <input
+            id="aiKey"
+            class="ai-input"
+            type="password"
+            placeholder="Gemini API key (optional)"
+            autocomplete="off"
+          />
+          <label class="ai-remember">
+            <input id="aiRemember" type="checkbox" checked /> Remember on this device
+          </label>
+          <p class="ai-note">
+            Free key:
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a>
+          </p>
+        </div>
+      </details>
+    </main>
+
+    <footer class="footer">
+      <span>100% in your browser &middot; nothing is uploaded</span>
+    </footer>
+
+    <script src="lib/fflate.min.js"></script>
+    <script src="lib/pdf.min.js"></script>
+    <script src="src/extract.js"></script>
+    <script src="src/parse.js"></script>
+    <script src="src/llm.js"></script>
+    <script src="src/docx.js"></script>
+    <script src="src/convert.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

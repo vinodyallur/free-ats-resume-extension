@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test / build artifacts
+_test*.js
+*_ATS.docx
+*.zip
+node_modules/
