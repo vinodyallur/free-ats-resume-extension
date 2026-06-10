@@ -4,11 +4,12 @@ Convert **any** resume (PDF, DOCX, or TXT) into a clean, single‑column, **ATS�
 one‑page `.docx` — entirely **inside your browser**. No server, no sign‑up, nothing is
 uploaded anywhere. Free & open source.
 
-> This is the browser‑extension version of
-> [free-ats-resume-builder](https://github.com/vinodyallur/free-ats-resume-builder)
-> (the Python CLI/web‑app). The extension re‑implements the parser and DOCX generator
-> in pure JavaScript so everything runs locally — required by Chrome's Manifest V3,
-> which forbids running remote code.
+> This is the browser‑extension version. Sibling projects:
+> [Web app](https://github.com/vinodyallur/free-ats-resume-web) (host free on Netlify) ·
+> [Python CLI/Streamlit](https://github.com/vinodyallur/free-ats-resume-builder).
+> The extension re‑implements the parser and DOCX generator in pure JavaScript so
+> everything runs locally — required by Chrome's Manifest V3, which forbids running
+> remote code.
 
 ---
 
